@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
@@ -46,5 +48,5 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
-          name: Grasscutter
-          path: grasscutter-*.jar
+          name: LunaGC
+          path: LunaGC-*.jar
