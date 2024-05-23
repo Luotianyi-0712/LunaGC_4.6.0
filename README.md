@@ -32,7 +32,7 @@ However, if you need a more detailed guide and help with the server please refer
 
 
 - Make sure to install java and set the environment variables.
-- Build the server (refer to "Compile the actual server" in this guide.), or if you don't know what to do or you are lazy just download the precompiled jar from the big header below.
+- Build the server (refer to "Compile the actual server" in this guide.)
 - Get the version.dll file from the Rsa_Patch folder and put it into the game root directory.
 - Download the older version of [mihoyonet.dll](https://autopatchhk.yuanshen.com/client_app/download/pc_zip/20231030132335_iOEfPMcbrXpiA8Ca/ScatteredFiles/GenshinImpact_Data/Plugins/mihoyonet.dll) (4.2.0) and replace `GenshinImpact_Data/Plugins/mihoyonet.dll`
 - Download the [Resources](https://github.com/Kei-Luna/LunaGC_Resources_4.6.0) and place it in `/Resources`
@@ -40,9 +40,6 @@ However, if you need a more detailed guide and help with the server please refer
 - Start the server and the game, make sure to also create an account in the LunaGC console!
 - Have fun
 =======
-
-# Precompiled server JAR file
-[Download](https://gi2.pmagickline.xyz/other/private-servers/LunaGC-4.6/precompiled-jar/LunaGC-4.6.0.jar)
 
 ### Compile the actual Server
 
@@ -77,3 +74,31 @@ chmod +x gradlew
 
 ## Troubleshooting
 - Make sure to set useEncryption and useInRouting both to false otherwise you might encounter errors.
+- To use windy make sure that you put your luac files in C:\Windy (make the folder if it doesnt exist)
+
+## Handmade Handbook (tested)
+- Create accounts: /account <username>
+- Get all achievements: /am grantall
+- God mode: /prop god 1
+- Enter a dungeon: 
+- Unlimited stamina: /prop ns 0
+- Unlimited energy: /prop UnlimitedEnergy 1
+- Recharge energy: /er
+- Get rid of that damn fog: /NoFog on|off
+- Set constellation for selected character: /setConst <number 1 to 6>
+- Get rid of the skill cooldown: /stat cdr 99
+- Change weather: /weather <sunny/rain/cloudy/thunderstorm/snow/mist>
+- Change talent for selected character: /talent <n/e/q/all> <level> (n - normal attack only) (e - skill only) (q - burst only)
+- Give items: /g <itemId|avatarId|all|weapons|mats|avatars> [lv<number>] [r<refinement number>] [x<amount>] [c<constellation number>] [sl<skilllevel>]
+- Unlock all: /unlockall (unlocks all I don't recommend)
+- Change world level: /prop wl <number>
+- Change AR: /prop player_level <number between 1 and 60>
+- Change the game speed: /gamespeed <0.1|0.2|0.5|0.75|1.0|1.5|2.0|3.0>
+### How to get all of the stuff maxed out: /g all lv90 r5 c6 c6 sl10 | Then do a separate one for the materials: /g mats x9999
+### How to TP around the map:
+- 0.5: Unlock the map (optional, if you do so then the waypoints and the others will disappear): /prop um 1
+- 1. Open the map
+- 2. Place a fishing rod marker (the last one) where you want to teleport and mark it.
+### How to get avatar/entity/material etc. IDs?
+- Go to [ambr.top](https://ambr.top)
+- Search up the material/avatar/enemy and then the ID of it should be in the URL of the site, for example I searched for the pyro hilichurl archer; the link for it is ambr.top/en/archive/monster/21010501/pyro-hilichurl-shooter so the ID for it will be 21010501.
